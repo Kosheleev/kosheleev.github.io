@@ -1,0 +1,27 @@
+section(id="main" class="main")
+  div(class="container main__container")
+    div(class="main__content")
+      h1(class="main__title")
+        | Знаем, как начать 
+        span 
+          | зарабатывать 
+        br
+        | на маркетплейсах и поможем Вам!
+      p(class="main__subtitle")
+        | Мы запустим продажи ваших товаров на популярных 
+        br
+        | торговых площадах и увеличим объемы сбыта!
+      a(class="main__button" href="#form")
+        | Оставить заявку
+    div(class="main__decor decor")
+      div(class="decor__bubbles")
+        div(class="decor__bubble" v-for="item in Array(4)")
+      div(class="decor__markets")
+        div(class="decor__market")
+          img(src="/assets/img/markets/ozon.svg" alt="")
+        div(class="decor__market")
+          img(src="/assets/img/markets/wildberries.png" alt="")
+        div(class="decor__market")
+          img(src="/assets/img/markets/aliexpress.svg" alt="")
+        div(class="decor__market")
+          img(src="/assets/img/markets/yandex-market.svg" alt="")

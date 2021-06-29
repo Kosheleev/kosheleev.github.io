@@ -1,0 +1,135 @@
+@import 'vars';
+
+
+@include font-face('OpenSans', 'OpenSans-Regular', 400, normal);
+@include font-face('OpenSans', 'OpenSans-SemiBold', 600, normal);
+@include font-face('OpenSans', 'OpenSans-Bold', 700, normal);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg1;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.root {
+  overflow: hidden;
+}
+
+
+@import 'blocks/header.scss';
+@import 'blocks/navbar.scss';
+
+
+.container {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $sm-min) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $md-min) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $lg-min) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $xl-min) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1360px) {
+    max-width: 1320px;
+  }
+
+  // @media (min-width: $xxl-min) {
+  //   max-width: 1540px;
+  // }
+}
+
+.section {
+  position: relative;
+  padding: 8rem 0;
+}
+
+.section__h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $text1;
+
+  span {
+    font-weight: 700;
+  }
+
+  @media (max-width: $sm-max) {
+    br {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $sm-max) {
+    font-size: 2.4rem;
+  }
+}
+
+.section__h2_center,
+.section__h3_center {
+
+  @media screen and (min-width: $md-min) {
+    text-align: center;
+  }
+}
+
+.section__h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $text1;
+
+  @media (max-width: $sm-max) {
+    br {
+      display: none;
+    }
+  }
+}
+
+@import 'sections/main.scss';
+@import 'sections/markets.scss';
+@import 'sections/customers.scss';
+@import 'sections/services.scss';
+@import 'sections/stages.scss';
+@import 'sections/offer.scss';
+
+@import 'blocks/footer.scss';
+// @import 'blocks/modal.scss';
+// @import 'blocks/alert.scss';

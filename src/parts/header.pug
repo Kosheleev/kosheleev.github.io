@@ -1,0 +1,31 @@
+
+header(id="header" class="header")
+  div(class="header__bg")
+  div(class="container header__container")
+    a(href="#main" class="header__logo")
+      img(src="/assets/img/logo.svg" alt="")
+    div(
+      id="navbar"
+      class="navbar"
+      :class="{navbar_opened: navbar}")
+      nav(class="navbar__links")
+        a(href="#markets" class="navbar__link")
+          | Маркетплейсы
+        a(href="#customers" class="navbar__link")
+          | Для кого
+        a(href="#services" class="navbar__link")
+          | Наши услуги
+        a(href="#stages" class="navbar__link")
+          | Этапы работы
+      a(class="navbar__tel" href="tel:+78005553535")
+        | +7 800 555 35 35
+      a(class="navbar__button" href="#form")
+        | Оставить заявку
+      button(
+        class="navbar__close"
+        @click="navbar = false")
+        i(class="fas fa-times")
+    button(
+      class="header__button"
+      @click="navbar = true")
+      i(class="fas fa-bars")

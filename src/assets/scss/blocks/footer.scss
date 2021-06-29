@@ -1,0 +1,42 @@
+.footer {
+  padding: 2rem;
+}
+
+.footer__container {
+  position: relative;
+  height: 100%;
+  z-index: 5;
+
+  @media screen and (max-width: $xs-max) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $sm-min) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  position: relative;
+  height: 3rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.footer__copyright {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+  color: $text3;
+
+  @media screen and (max-width: $xs-max) {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

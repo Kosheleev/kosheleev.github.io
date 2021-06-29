@@ -1,0 +1,51 @@
+@import 'colors', 'media';
+
+
+@mixin transition($d: 0.2s) {
+  transition: ease $d all;
+}
+
+@mixin hover($opacity: 0.7) {
+  @include transition;
+
+  &:hover {
+    opacity: $opacity;
+    cursor: pointer;
+  }
+}
+
+
+@mixin placeholder ($color: $text3) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin shadow ($alpha: 0.04) {
+  box-shadow: 0px 8px 16px 8px rgba(32, 32, 32, $alpha);
+}
+
+
+// font-face
+
+@mixin font-face($font-famaly, $name, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-famaly;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('/assets/fonts/'+$font-famaly+'/'+$name+'/'+$name+'.woff2') format('woff2'), 
+      url('/assets/fonts/'+$font-famaly+'/'+$name+'/'+$name+'.woff') format('woff'),
+      url('/assets/fonts/'+$font-famaly+'/'+$name+'/'+$name+'.ttf') format('ttf'),
+      url('/assets/fonts/'+$font-famaly+'/'+$name+'/'+$name+'.eot') format('eot');
+    font-display: swap;
+  }
+}

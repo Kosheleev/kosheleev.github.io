@@ -1,0 +1,123 @@
+.offer {
+
+  @media screen and (max-width: $xs-max) {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+
+  .section__h2  {
+
+    @media (max-width: $lg-max) {
+      font-size: 2.4rem;
+
+      br {
+        display: none;
+      }
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+}
+
+.offer__container {
+
+  @media (min-width: $lg-min) {
+    display: grid;
+    grid-template-columns: 1fr 40rem;
+    grid-gap: 4rem;
+    align-items: center;
+  }
+}
+
+.offer__content {
+  
+  @media (min-width: $xl-min) {
+    padding-bottom: 4rem;
+  }
+}
+
+.offer__text {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: $text2;
+
+  
+  @media (max-width: $xs-max) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.form {
+  padding: 3rem;
+  background-color: $primary;
+  border-radius: 2rem;
+  @include shadow;
+
+  @media (max-width: $md-max) {
+    margin-top: 4rem;
+  }
+
+  @media (min-width: $sm-min) {
+    padding: 4rem;
+    background-color: $primary;
+    border-radius: 2rem;
+  }
+}
+
+.form__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $text01;
+}
+
+.form__input {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  display: block;
+  height: 5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  background-color: $bg1;
+  border-radius: 1rem;
+  @include placeholder;
+}
+
+.form__offer {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: $text01;
+
+  a {
+    font-weight: 600;
+    color: $text01;
+    text-decoration: underline;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.form__button {
+  margin-top: 2rem;
+  height: 5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $primary;
+  background-color: $bg1;
+  border-radius: 1rem;
+  @include transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: $bg1, $alpha: 0.8);
+  }
+}

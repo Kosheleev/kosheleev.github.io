@@ -1,0 +1,37 @@
+section(id="offer" class="section offer")
+  div(class="container offer__container")
+    div(class="offer__content")
+      h2(class="section__h2")
+        span
+          | Бесплатная аналитика 
+        | по категориям 
+        br
+        | и карточкам товаров при регистрации!
+      p(class="offer__text")
+        | При регистрации мы бесплатно предоставим вам информацию 
+        br
+        | по ключевым показателям необходимой категории 
+        br
+        | и ключевым конкурентам.
+    div(class="offer__form")
+      div(id="form" class="form")
+        p(class="form__title")
+          | Форма регистрации
+        input(
+          class="form__input"
+          placeholder="Имя"
+          v-modal="form.name")
+        input(
+          class="form__input"
+          placeholder="Телефон"
+          v-modal="form.phone")
+        p(class="form__offer")
+          | Заполняя форму вы соглашаетесь 
+          br
+          | с 
+          a(href="")
+            | договором оферты
+        button(
+          class="form__button"
+          :click="onFormSubmit()")
+          | Отправить

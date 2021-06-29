@@ -1,0 +1,74 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+
+  @media screen and (max-width: $md-max) {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: $lg-min) {
+    padding: 2rem;
+  }
+
+  .body_modal & {
+    z-index: 1!important;
+  }
+}
+
+.header__container {
+  position: relative;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  z-index: 5;
+
+  @media screen and (max-width: $md-max) {
+    grid-template-columns: 1fr 6rem;
+    grid-gap: 2rem;
+    padding-right: 0!important;
+  }
+
+  @media screen and (min-width: $lg-min) {
+    grid-template-columns: auto 1fr;
+    grid-gap: 8rem;
+  }
+}
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  background-color: $bg1;
+  box-shadow: 0 0 10px 4px rgba(32, 32, 32, 0.04);
+  z-index: -1;
+}
+
+.header__logo {
+  position: relative;
+  height: 4rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.header__button {
+
+  @media screen and (max-width: $md-max) {
+    height: 100%;
+    font-size: 2rem;
+    color: $text3;
+    @include hover;
+  }
+
+  @media screen and (min-width: $lg-min) {
+    display: none;
+  }
+}
