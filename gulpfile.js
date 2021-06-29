@@ -12,7 +12,6 @@ const sass = require('gulp-sass')
 const imagemin = require('gulp-imagemin')
 
 const uglify = require('gulp-uglify')
-// const webpackStream = require('webpack-stream')
 
 const del = require('del')
 const rename = require('gulp-rename')
@@ -40,7 +39,6 @@ const path = {
   },
   src: {
     html: srcPath + 'index.pug',
-    pages: srcPath + 'pages/**/index.{html,pug}',
     js: srcPath + 'assets/js/*.js',
     css: srcPath + 'assets/css/*.css',
     scss: srcPath + 'assets/scss/*.scss',
@@ -103,7 +101,6 @@ function css() {
       cascade: true
     }),
     cssbeautify(),
-    // dest(path.build.css),
     cssnano({
       zindex: false,
       discardComments: {
@@ -141,7 +138,6 @@ function cssWatch() {
       suffix: '.min',
       extname: '.css'
     }),
-    // dest(path.build.css),
     src(path.src.css, {base: srcPath + 'assets/css/'}),
     dest(path.build.css),
     browserSync.reload({stream: true})
@@ -162,24 +158,6 @@ function js() {
       }
     }),
     uglify(),
-    // webpackStream({
-    //   mode: 'production',
-    //   output: {
-    //     filename: 'script.js',
-    //   },
-    //   module: {
-    //     rules: [
-    //       {
-    //         test: /\.(js)$/,
-    //         exclude: /(node_modules)/,
-    //         loader: 'babel-loader',
-    //         query: {
-    //           presets: ['@babel/preset-env']
-    //         }
-    //       }
-    //     ]
-    //   }
-    // }),
     dest(path.build.js),
     browserSync.reload({stream: true})
   )
@@ -199,24 +177,6 @@ function jsWatch() {
       }
     }),
     uglify(),
-    // webpackStream({
-    //   mode: 'production',
-    //   output: {
-    //     filename: 'script.js',
-    //   },
-    //   module: {
-    //     rules: [
-    //       {
-    //         test: /\.(js)$/,
-    //         exclude: /(node_modules)/,
-    //         loader: 'babel-loader',
-    //         query: {
-    //           presets: ['@babel/preset-env']
-    //         }
-    //       }
-    //     ]
-    //   }
-    // }),
     dest(path.build.js),
     browserSync.reload({stream: true})
   )
