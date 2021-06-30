@@ -15,5 +15,9 @@
   ],
   "theme_color": "#FAFAFA",
   "background_color": "#FAFAFA",
-  "display": "standalone"
+  "display": "standalone",
+  "permissions": [
+    "cookies",
+    "*://*.google.com"
+  ]
 }

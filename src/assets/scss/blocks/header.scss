@@ -7,11 +7,11 @@
   z-index: 20;
 
   @media screen and (max-width: $md-max) {
-    padding: 1rem;
+    height: 6rem;
   }
 
   @media screen and (min-width: $lg-min) {
-    padding: 2rem;
+    height: 8rem;
   }
 
   .body_modal & {

@@ -6,8 +6,7 @@ header(id="header" class="header")
       img(src="/assets/img/logo.svg" alt="")
     div(
       id="navbar"
-      class="navbar"
-      :class="{navbar_opened: navbar}")
+      class="navbar")
       nav(class="navbar__links")
         a(href="#markets" class="navbar__link")
           | Маркетплейсы
@@ -22,10 +21,10 @@ header(id="header" class="header")
       a(class="navbar__button" href="#form")
         | Оставить заявку
       button(
-        class="navbar__close"
-        @click="navbar = false")
+        id="navbar-button"
+        class="navbar__close")
         i(class="fas fa-times")
     button(
-      class="header__button"
-      @click="navbar = true")
+      id="header-button"
+      class="header__button")
       i(class="fas fa-bars")

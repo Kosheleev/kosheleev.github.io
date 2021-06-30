@@ -1,4 +1,6 @@
 section(id="main" class="main")
+  div(class="main__bg")
+    | Markety
   div(class="container main__container")
     div(class="main__content")
       h1(class="main__title")
@@ -15,7 +17,10 @@ section(id="main" class="main")
         | Оставить заявку
     div(class="main__decor decor")
       div(class="decor__bubbles")
-        div(class="decor__bubble" v-for="item in Array(4)")
+        div(class="decor__bubble")
+        div(class="decor__bubble")
+        div(class="decor__bubble")
+        div(class="decor__bubble")
       div(class="decor__markets")
         div(class="decor__market")
           img(src="/assets/img/markets/ozon.svg" alt="")

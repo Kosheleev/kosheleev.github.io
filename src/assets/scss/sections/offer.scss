@@ -21,7 +21,19 @@
   }
 }
 
+.offer__bg {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80rem;
+  font-weight: 700;
+  color: $text2;
+  opacity: 0.02;
+}
+
 .offer__container {
+  position: relative;
 
   @media (min-width: $lg-min) {
     display: grid;
@@ -52,72 +64,79 @@
   }
 }
 
-.form {
-  padding: 3rem;
-  background-color: $primary;
-  border-radius: 2rem;
-  @include shadow;
+.offer__form {
 
   @media (max-width: $md-max) {
-    margin-top: 4rem;
-  }
-
-  @media (min-width: $sm-min) {
-    padding: 4rem;
-    background-color: $primary;
-    border-radius: 2rem;
+    margin: 4rem -4rem -4rem;
   }
 }
 
-.form__title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: $text01;
-}
+// .form {
+//   padding: 3rem;
+//   background-color: $primary;
+//   border-radius: 2rem;
+//   @include shadow;
 
-.form__input {
-  margin-top: 2rem;
-  padding: 0 2rem;
-  display: block;
-  height: 5rem;
-  width: 100%;
-  font-size: 1.6rem;
-  background-color: $bg1;
-  border-radius: 1rem;
-  @include placeholder;
-}
+//   @media (max-width: $md-max) {
+//     margin-top: 4rem;
+//   }
 
-.form__offer {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  color: $text01;
+//   @media (min-width: $sm-min) {
+//     padding: 4rem;
+//     background-color: $primary;
+//     border-radius: 2rem;
+//   }
+// }
 
-  a {
-    font-weight: 600;
-    color: $text01;
-    text-decoration: underline;
-    cursor: pointer;
-    @include transition;
+// .form__title {
+//   font-size: 1.8rem;
+//   font-weight: 600;
+//   color: $text01;
+// }
 
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
+// .form__input {
+//   margin-top: 2rem;
+//   padding: 0 2rem;
+//   display: block;
+//   height: 5rem;
+//   width: 100%;
+//   font-size: 1.6rem;
+//   background-color: $bg1;
+//   border-radius: 1rem;
+//   @include placeholder;
+// }
 
-.form__button {
-  margin-top: 2rem;
-  height: 5rem;
-  width: 100%;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: $primary;
-  background-color: $bg1;
-  border-radius: 1rem;
-  @include transition;
-  cursor: pointer;
+// .form__offer {
+//   margin-top: 2rem;
+//   font-size: 1.4rem;
+//   color: $text01;
 
-  &:hover {
-    background-color: rgba($color: $bg1, $alpha: 0.8);
-  }
-}
+//   a {
+//     font-weight: 600;
+//     color: $text01;
+//     text-decoration: underline;
+//     cursor: pointer;
+//     @include transition;
+
+//     &:hover {
+//       opacity: 0.8;
+//     }
+//   }
+// }
+
+// .form__button {
+//   margin-top: 2rem;
+//   height: 5rem;
+//   width: 100%;
+//   font-size: 1.6rem;
+//   font-weight: 600;
+//   color: $primary;
+//   background-color: $bg1;
+//   border-radius: 1rem;
+//   @include transition;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: rgba($color: $bg1, $alpha: 0.8);
+//   }
+// }

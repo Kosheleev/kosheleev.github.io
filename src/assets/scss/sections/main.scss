@@ -4,7 +4,19 @@
   overflow: hidden;
 }
 
+.main__bg {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 80rem;
+  font-weight: 700;
+  color: $text2;
+  opacity: 0.02;
+}
+
 .main__container {
+  position: relative;
   padding-top: 8rem;
   padding-bottom: 8rem;
   display: grid;
