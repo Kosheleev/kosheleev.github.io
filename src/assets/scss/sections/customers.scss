@@ -78,7 +78,8 @@
   @include shadow($alpha: 0.02);
 
   @media (max-width: $sm-max) {
-    width: 24rem;
+    padding: 3rem 2rem;
+    width: 20rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -95,14 +96,19 @@
   height: 10rem;
   width: 10rem;
 
-  @media (min-width: $md-min) and (max-width: $md-max) {
-    height: 6rem;
-    width: 6rem;
+  @media (max-width: $md-max) {
+    height: 8rem;
+    width: 8rem;
   }
 }
 
 .customer__title {
   margin-top: 2rem;
   font-size: 1.6rem;
+  line-height: 2rem;
   color: $secondary;
+
+  @media (max-width: $md-max) {
+    font-size: 1.4rem;
+  }
 }

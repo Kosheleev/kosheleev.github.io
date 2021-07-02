@@ -2,6 +2,10 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+
+  @media screen and (min-height: 660px) and (max-width: $sm-max) {
+    min-height: auto;
+  }
 }
 
 .main__bg {
@@ -35,6 +39,11 @@
   @media screen and (min-width: $xl-min) {
     grid-template-columns: 1fr 52rem;
   }
+
+  @media screen and (min-height: 660px) and (max-width: $sm-max) {
+    padding-top: 16rem;
+    min-height: auto;
+  }
 }
 
 .main__title {
@@ -63,6 +72,12 @@
   font-size: 1.8rem;
   line-height: 1.6;
   color: $text2;
+
+  @media screen and (max-width: $lg-max) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .main__button {
@@ -236,14 +251,13 @@
   }
 }
 
-.cta-button {
+.phone-button,
+.whatsapp-button {
   position: fixed;
-  bottom: 3rem;
   right: 3rem;
   width: 6rem;
   line-height: 6rem;
   text-align: center;
-  font-size: 2rem;
   color: $text01;
   background-color: $primary;
   border-radius: 0.5rem;
@@ -252,7 +266,6 @@
   z-index: 10;
 
   @media (max-width: $xs-max) {
-    bottom: 2rem;
     right: 2rem;
     line-height: 5rem;
     width: 5rem;
@@ -272,5 +285,23 @@
 
   &:hover:after {
     opacity: 0.1;
+  }
+}
+
+.phone-button {
+  bottom: 3rem;
+  font-size: 2rem;
+
+  @media (max-width: $xs-max) {
+    bottom: 2rem;
+  }
+}
+
+.whatsapp-button {
+  bottom: 11rem;
+  font-size: 2.4rem;
+
+  @media (max-width: $xs-max) {
+    bottom: 9rem;
   }
 }
