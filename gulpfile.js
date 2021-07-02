@@ -236,6 +236,13 @@ function webfonts() {
   )
 }
 
+function cname() {
+  return pipeline(
+    src('src/CNAME'),
+    dest('dist/')
+  )
+}
+
 function clean() {
   return del(path.clean)
 }
@@ -251,7 +258,7 @@ function watchFiles() {
 }
 
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, img, favicon, fonts, webfonts))
+const build = gulp.series(clean, gulp.parallel(html, css, js, img, favicon, fonts, webfonts, cname))
 const watch = gulp.parallel(build, watchFiles, serve)
 
 
