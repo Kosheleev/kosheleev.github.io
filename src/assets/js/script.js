@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     body.style.overflow = 'hidden'
   })
 
-  document.getElementById('navbar-button').addEventListener('click', () => {
-    navbar.classList.remove('navbar_opened')
-    body.removeAttribute('style')
-  })
+  const items = document.getElementsByClassName('navbar__item')
+
+  for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', () => {
+      navbar.classList.remove('navbar_opened')
+      body.removeAttribute('style')
+    })
+  }
 })
 
 window.addEventListener('scroll', () => {

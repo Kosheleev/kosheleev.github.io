@@ -6,6 +6,10 @@
   @media screen and (min-height: 660px) and (max-width: $sm-max) {
     min-height: auto;
   }
+
+  @media screen and (min-height: 1080px) and (min-width: $md-min) {
+    min-height: auto;
+  }
 }
 
 .main__bg {
@@ -42,6 +46,12 @@
 
   @media screen and (min-height: 660px) and (max-width: $sm-max) {
     padding-top: 16rem;
+    min-height: auto;
+  }
+
+  @media screen and (min-height: 1080px) and (min-width: $md-min) {
+    padding-top: 24rem;
+    padding-bottom: 20rem;
     min-height: auto;
   }
 }
